@@ -20,7 +20,7 @@ function MainPage() {
   return (
     <div
       style={{
-        background: "linear-gradient(to bottom, #1e3c72,rgb(31, 82, 172))",
+        background: "linear-gradient(to bottom, #1e3c72,rgb(13, 32, 65))",
         minHeight: "100vh",
 
         width: "100vw",
@@ -29,9 +29,51 @@ function MainPage() {
         boxSizing: "border-box",
         fontFamily: "monospace, sans-serif",
       }}>
+      {/* Mobile Navbar */}
+      <nav
+        className="navbar navbar-expand-lg  d-lg-none fixed-top"
+        style={{ backgroundColor: "#667085" }}>
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">
+            Sulakshika Gunasekara
+          </a>
+          <button
+            className="navbar-toggler "
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mobileNav">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="mobileNav">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <a className="nav-link font-bold" href="#about">
+                  About
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#skills">
+                  Skills
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#projects">
+                  Projects
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#contact">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
       {/* Navigation Bar */}
       <div
-        className=" - mt-5  py-3  d-none d-lg-flex"
+        className=" - mt-5  py-3  d-none d-lg-flex flex-column"
         style={{
           position: "fixed",
           left: 0,
@@ -104,18 +146,13 @@ function MainPage() {
             </li>
             <li>
               <a
-                href="assets/Resume_c (10).pdf"
-                class="btn  btn-sm mt-3 font-bold p-3 "
+                href="src/assets/resume.pdf"
+                download="Sulakshika_Gunasekara_Resume.pdf"
+                className="btn btn-outline-primary btn-sm mt-3"
                 style={{
-                  border: "2px solid #2a5298",
                   color: "#dbdee4",
-                  hover: {
-                    background: "#fffff",
-                  },
-                  transition: "background 0.5s ease",
-                }}
-                role="button"
-                download>
+                  border: "2px solid #2a5298",
+                }}>
                 Download CV
               </a>
             </li>
@@ -137,7 +174,7 @@ function MainPage() {
         {/* About Section */}
         <section
           id="about"
-          className="text-white   p-5"
+          className="text-white   pt-3 pr-5 pb-3 pl-5 m-3 d-flex flex-column align-items-center justify-content-center"
           style={{
             maxWidth: "800px",
             fontFamily: "Lucida Console",
@@ -146,6 +183,26 @@ function MainPage() {
             textAlign: "justify",
             lineHeight: "1.6",
           }}>
+          {/* Profile image for small screens */}
+          <div className="d-block d-lg-none text-center mb-4 mt-5">
+            <img
+              src="src/assets/me.jpg"
+              alt="Profile"
+              className="w-20 h-20 rounded-full object-cover border-4 shadow-lg m-3"
+              style={{
+                objectFit: "cover",
+                objectPosition: "center",
+                width: "150px",
+                height: "150px",
+                borderRadius: "50%",
+              }}
+              onError={(e) => {
+                e.target.src =
+                  "https://via.placeholder.com/80x80/4A90E2/FFFFFF?text=SG";
+              }}
+            />
+          </div>
+
           <p>
             I am a passionate and results-driven software engineer with strong
             skills in full-stack development, including technologies like React,
@@ -213,75 +270,6 @@ function MainPage() {
         </section>
 
         {/* Projects Section */}
-        {/* <section id="projects" className="p-3 m-3">
-          <div className="container">
-            <h2
-              class="mb-4 text-center"
-              style={{
-                background:
-                  "linear-gradient(to right,rgb(64, 83, 102),rgb(202, 222, 226))",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                fontSize: "2.5rem",
-                fontFamily: "monospace",
-                fontWeight: "bold",
-              }}>
-              Projects
-            </h2>
-
-            {/* Project 1  */}
-
-        {/* <div
-              className="d-flex justify-content-center align-items-center gap-4 flex-wrap  mb-5"
-              style={{ fontFamily: "Lucida Console" }}>
-              <div
-                className="card shadow-lg border-0"
-                style={{
-                  background:
-                    "linear-gradient(145deg,rgb(102, 122, 163),rgb(40, 67, 113))",
-                  color: "white",
-                  borderRadius: "1rem",
-                  overflow: "hidden",
-                }}>
-                <div className="card-body">
-                  <h5
-                    className="card-title text-center"
-                    style={{
-                      fontSize: "1.5rem",
-                      fontWeight: "bold",
-                      borderBottom: "1px solid white",
-                      paddingBottom: "10px",
-                    }}>
-                    Bicycle Sharing System
-                  </h5>
-
-                  <p
-                    className="card-text text-center"
-                    style={{
-                      fontSize: "0.9rem",
-                      fontWeight: "bold",
-                      color: "#dcdcdc",
-                    }}>
-                    HTML, CSS, JavaScript, Bootstrap, PHP, MySQL
-                  </p>
-
-                  <p
-                    className="card-text text-justify"
-                    style={{ fontSize: "0.85rem", lineHeight: "1.5" }}>
-                    The Bicycle Sharing System allows users to register, log in,
-                    and rent bikes at multiple docking stations with real-time
-                    availability tracking. It supports seamless rentals and
-                    returns, integrated payment processing, and subscription
-                    plans. An admin panel manages bike inventory, monitors
-                    usage, and oversees station maintenance—promoting
-                    eco-friendly urban mobility.
-                  </p>
-                </div>
-              </div>
-            </div> */}
-
-        {/* </div>
-        </section>  */}
 
         <section id="projects" className="p-3 m-3">
           <div className="container">
