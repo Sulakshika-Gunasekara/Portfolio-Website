@@ -107,7 +107,7 @@ function MainPage() {
                   Full Stack Developer
                 </h3>
                 <img
-                  src="src/assets/me.jpg"
+                  src="/me.jpg"
                   alt="Profile"
                   className="w-20 h-20 rounded-full object-cover border-4 shadow-lg m-5 p-2"
                   style={{
@@ -146,8 +146,8 @@ function MainPage() {
             </li>
             <li>
               <a
-                href="src/assets/resume.pdf"
-                download="Sulakshika_Gunasekara_Resume.pdf"
+                href="public/resume.pdf"
+                download="resume.pdf"
                 className="btn btn-outline-primary btn-sm mt-3"
                 style={{
                   color: "#dbdee4",
