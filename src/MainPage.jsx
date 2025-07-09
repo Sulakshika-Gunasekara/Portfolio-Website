@@ -47,7 +47,7 @@ function MainPage() {
           <div className="collapse navbar-collapse" id="mobileNav">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link font-bold" href="#about">
+                <a className="nav-link " href="#about">
                   About
                 </a>
               </li>
@@ -107,9 +107,9 @@ function MainPage() {
                   Full Stack Developer
                 </h3>
                 <img
-                  src="/me.jpg"
+                  src="./me.jpg"
                   alt="Profile"
-                  className="w-20 h-20 rounded-full object-cover border-4 shadow-lg m-5 p-2"
+                  className="w-full h-full rounded-full object-cover border-4 shadow-lg m-5 p-2"
                   style={{
                     objectFit: "cover",
                     objectPosition: "center",
@@ -146,7 +146,7 @@ function MainPage() {
             </li>
             <li>
               <a
-                href="public/resume.pdf"
+                href="./resume.pdf"
                 download="resume.pdf"
                 className="btn btn-outline-primary btn-sm mt-3"
                 style={{
@@ -186,7 +186,7 @@ function MainPage() {
           {/* Profile image for small screens */}
           <div className="d-block d-lg-none text-center mb-4 mt-5">
             <img
-              src="src/assets/me.jpg"
+              src="./me.jpg"
               alt="Profile"
               className="w-20 h-20 rounded-full object-cover border-4 shadow-lg m-3"
               style={{
@@ -214,6 +214,20 @@ function MainPage() {
             dynamic teams, and turn ideas into impactful digital products.
           </p>
         </section>
+
+        {/* CV for small screens */}
+        <div className="d-block d-lg-none text-center mb-4 mt-5">
+          <a
+            href="./resume.pdf"
+            download="resume.pdf"
+            className="btn btn-outline-primary btn-sm mt-3"
+            style={{
+              color: "#dbdee4",
+              border: "2px solid #2a5298",
+            }}>
+            Download CV
+          </a>
+        </div>
         {/* Skills Section */}
 
         <section id="skills" className="p-4">

@@ -1,5 +1,3 @@
-// components/ProjectCard.jsx
-
 const ProjectCard = ({ title, technologies, description }) => (
   <div
     className="d-flex justify-content-center align-items-center gap-4 flex-wrap mb-5"
