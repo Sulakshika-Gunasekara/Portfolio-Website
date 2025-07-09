@@ -20,7 +20,7 @@ function MainPage() {
   return (
     <div
       style={{
-        background: "linear-gradient(to bottom, #1e3c72,rgb(13, 32, 65))",
+        background: "linear-gradient(to bottom, #1e3c72,rgb(66, 78, 97))",
         minHeight: "100vh",
 
         width: "100vw",
@@ -47,7 +47,7 @@ function MainPage() {
           <div className="collapse navbar-collapse" id="mobileNav">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link font-bold" href="#about">
+                <a className="nav-link " href="#about">
                   About
                 </a>
               </li>
@@ -79,7 +79,7 @@ function MainPage() {
           left: 0,
           top: 0,
           height: "100vh",
-          width: "40%",
+          width: "35%",
 
           overflowY: "hidden",
           zIndex: 1000,
@@ -107,9 +107,9 @@ function MainPage() {
                   Full Stack Developer
                 </h3>
                 <img
-                  src="/me.jpg"
+                  src="./me.jpg"
                   alt="Profile"
-                  className="w-20 h-20 rounded-full object-cover border-4 shadow-lg m-5 p-2"
+                  className="w-full h-full rounded-full object-cover border-4 shadow-lg m-5 p-2"
                   style={{
                     objectFit: "cover",
                     objectPosition: "center",
@@ -146,7 +146,7 @@ function MainPage() {
             </li>
             <li>
               <a
-                href="public/resume.pdf"
+                href="./resume.pdf"
                 download="resume.pdf"
                 className="btn btn-outline-primary btn-sm mt-3"
                 style={{
@@ -162,11 +162,14 @@ function MainPage() {
 
       {/* Main Content Area */}
       <main
-        className="flex-1 flex items-center justify-center"
+        // className="flex-1 flex items-center justify-center"
+        className="col-12 offset-lg-4 col-lg-8 "
         style={{
           padding: "20px",
-          marginTop: "200px",
-          marginLeft: "40%",
+          marginTop: "100px",
+
+          left: 0,
+          top: 0,
           minHeight: "100vh",
           zIndex: 1,
           position: "relative",
@@ -184,9 +187,9 @@ function MainPage() {
             lineHeight: "1.6",
           }}>
           {/* Profile image for small screens */}
-          <div className="d-block d-lg-none text-center mb-4 mt-5">
+          <div className="d-block d-lg-none text-center mb-4 ">
             <img
-              src="src/assets/me.jpg"
+              src="./me.jpg"
               alt="Profile"
               className="w-20 h-20 rounded-full object-cover border-4 shadow-lg m-3"
               style={{
@@ -201,6 +204,9 @@ function MainPage() {
                   "https://via.placeholder.com/80x80/4A90E2/FFFFFF?text=SG";
               }}
             />
+            <h1 id="name" className="text-white text-4xl font-bold mb-2 pb-2 ">
+              Sulakshika Gunasekara
+            </h1>
           </div>
 
           <p>
@@ -214,6 +220,20 @@ function MainPage() {
             dynamic teams, and turn ideas into impactful digital products.
           </p>
         </section>
+
+        {/* CV for small screens */}
+        <div className="d-block d-lg-none text-center mb-4 mt-5">
+          <a
+            href="./resume.pdf"
+            download="resume.pdf"
+            className="btn btn-outline-primary btn-sm mt-3"
+            style={{
+              color: "#dbdee4",
+              border: "2px solid #2a5298",
+            }}>
+            Download CV
+          </a>
+        </div>
         {/* Skills Section */}
 
         <section id="skills" className="p-4">
@@ -303,16 +323,6 @@ function MainPage() {
           id="contact"
           className="m-2 p-3 d-flex flex-column align-items-center justify-content-center">
           <div className="container text-center">
-            {/* <h3
-              className="mb-4"
-              style={{
-                color: "linear-gradient(to right, #ff7e5f, #feb47b)",
-                fontSize: "2.5rem",
-                fontFamily: "monospace",
-                fontWeight: "bold",
-              }}>
-              Contact Me
-            </h3> */}
             <h3
               className="mb-4"
               style={{
